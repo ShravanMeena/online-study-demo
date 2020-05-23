@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--favicon-->
+    <link rel="icon" href="asset/airpods_large.jpg" type="image/gif" sizes="16x16">
+
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <title>OnlineClasses</title>
+    <style>
+
+        body {
+            background: #D1D1D1;
+           
+        }
+
+
+
+   .news-container {
+    width: 100%;
+    height:90%;
+    overflow: hidden;
+    background:#f2f2f2;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #1570A6;
+}
+
+@media only screen and (max-width: 880px) {
+   .news-container {
+    height:55%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+   .news-container {
+    height:100%;
+}
+}
+.marquee {
+    top: 6em;
+    position: relative;
+    box-sizing: border-box;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+/* Make it move! */
+@keyframes marquee {
+    0%   { top:   22em }
+    100% { top: -11em }
+}
+
+/* Make it look pretty */
+.news-main .marquee {
+	margin: 0;
+    padding: 0 1em;
+    line-height: 1.5em;
+    font: 1em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.news-main:before, .news-main::before,
+.news-main:after,  .news-main::after {
+    left: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 100%; height: 2em;
+    background-image: linear-gradient(top, #FFF, rgba(255,255,255,0));
+}
+
+.news-main:after, .news-main::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.news-main:before, .news-main::before {
+    top: 0;
+}
+
+/* Style the links */
+.vanity {
+    color: #333;
+    text-align: center;
+    font: .75em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.vanity a, .news-main a {
+    color: #1570A6;
+    transition: color .5s;
+    text-decoration: none;
+}
+
+.vanity a:hover, .news-main a:hover {
+    color: #F65314;
+}
+
+/* Style toggle button */
+.toggle {
+	display: block;
+    margin: 2em auto;
+}
+
+
+/**card-cinatiner */
+
+a{
+    color: #FFF;
+      text-decoration: none;
+
+}
+.card-box {
+  display: block;
+  background: #9998c6;
+  color: #FFF;
+  width: 100%;
+  height: 300px;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  margin: 10px 0 10px 0;
+  display: inline-block;
+  text-align: center;
+  transition: all .25s linear;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+}
+
+.card-box:hover{
+  box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
+}
+
+.card-box .main-i{
+    font-size: 56px;
+    color: red;
+}
+
+
+
+.jumbotron-parallax{
+    background: url('asset/computer-keyboard-laptop-screen-109371.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+color:white !important;
+height:500px;
+margin-top: -35px; 
+padding:32px
+}
+
+.btn-outline-danger{
+  color:gray;
+  border-color:red;
+  border-radius:0px;
+  font-weight:100;
+  margin-top:20px;
+}
+
+/* Style the tab */
+
+/* boring stuff */
+
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+* {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+
+.container-touch {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+h3 {
+  color: #262626;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666666;
+}
+p.small {
+  font-size: 14px;
+}
+
+.go-corner {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #00838d;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card1 {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.card1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #00838d;
+  height: 32px;
+  width: 42px;
+  border-radius: 32px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+.card1:hover:before {
+  -webkit-transform: scale(21);
+          transform: scale(21);
+}
+
+.card1:hover p {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+.card1:hover h3 {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: #ffffff;
+}
+
+
+
+ul {
+ padding:0;
+ margin:0
+}
+li {
+ list-style:none
+}
+a:focus,a:hover {
+ text-decoration:none;
+ -webkit-transition:.3s ease;
+ -o-transition:.3s ease;
+ transition:.3s ease
+}
+a:focus {
+ outline:0
+}
+img {
+ max-width:100%
+}
+p {
+ font-size:16px;
+ line-height:30px;
+ color:#898b96;
+ font-weight:300
+}
+h4 {
+ font-family:Rubik,sans-serif;
+ margin:0;
+ font-weight:400;
+ padding:0;
+ color:#363940
+}
+a {
+ color:#5867dd
+}
+.no-padding {
+ padding:0!important
+}
+.go_top {
+ line-height:40px;
+ cursor:pointer;
+ width:40px;
+ background:#5867dd;
+ color:#fff;
+ position:fixed;
+ -webkit-box-shadow:0 4px 4px rgba(0,0,0,.1);
+ box-shadow:0 4px 4px rgba(0,0,0,.1);
+ -webkit-border-radius:50%;
+ border-radius:50%;
+ right:-webkit-calc((100% - 1140px)/ 2);
+ right:calc((100% - 1340px)/ 2);
+ z-index:111;
+ bottom:80px;
+ text-align:center
+}
+.go_top span {
+ display:inline-block
+}
+.footer-big {
+ padding:105px 0 65px 0
+}
+.footer-big .footer-widget {
+ margin-bottom:40px
+}
+.footer--light {
+ background:#e7e8ed
+}
+.footer-big .footer-menu ul li a,.footer-big p,.footer-big ul li {
+ color:#898b96
+}
+.footer-menu {
+ padding-left:48px
+}
+.footer-menu ul li a {
+ font-size:15px;
+ line-height:32px;
+ -webkit-transition:.3s;
+ -o-transition:.3s;
+ transition:.3s
+}
+.footer-menu ul li a:hover {
+ color:#5867dd
+}
+.footer-menu--1 {
+ width:100%
+}
+.footer-widget-title {
+ line-height:42px;
+ margin-bottom:10px;
+ font-size:18px
+}
+.mini-footer {
+ background:#192027;
+ text-align:center;
+ padding:32px 0
+}
+.mini-footer p {
+ margin:0;
+ line-height:26px;
+ font-size:15px;
+ color:#999
+}
+.mini-footer p a {
+ color:#5867dd
+}
+.mini-footer p a:hover {
+ color:#34bfa3
+}
+.widget-about img {
+ display:block;
+ margin-bottom:30px
+}
+.widget-about p {
+ font-weight:400
+}
+.widget-about .contact-details {
+ margin:30px 0 0 0
+}
+.widget-about .contact-details li {
+ margin-bottom:10px
+}
+.widget-about .contact-details li:last-child {
+ margin-bottom:0
+}
+.widget-about .contact-details li span {
+ padding-right:12px
+}
+.widget-about .contact-details li a {
+ color:#5867dd
+}
+@media (max-width:991px) {
+ .footer-menu {
+  padding-left:0
+ }
+}/* google font */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.header {
+  width: 100%;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.nav {
+  width: 100%;
+
+  background: #ff5252;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.top-nav .nav-link i{
+    font-size: 36px;
+    color: #1570A6;
+}
+.top-bar-social{
+    background-color: #1570A6;
+    height: 30px;
+}
+.alignleft {
+	float: left;
+    margin-left:40px;
+}
+.alignright {
+    float: right;
+    margin-right: 40px;
+}
+.main-nav .nav-link{
+    margin-right: 32px;
+}
+.carousel-indicators li { visibility: hidden; }
+
+    </style>
+</head>
+
+<body>
+
+    <section id="top-nav">
+        <div class="top-bar-social">
+            <p class="alignleft">left.</p>
+            <p class="alignright">right.</p>
+        </div>
+        <div class='header'>
+                <nav class="navbar navbar-dark  navbar-expand justify-content-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="asset/google-play-store-button-1574486123415.png" width="100px" alt="">
+                    </a>
+                    
+                    <div class="container ">
+                        <ul class="navbar-nav top-nav nav-justified w-100 text-center">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link d-flex flex-column">
+                                <i class="fa fa-laptop"></i>
+                                <span class="d-none d-sm-inline">home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link d-flex flex-column">
+                                <i class="fa fa-laptop"></i>
+                                <span class="d-none d-sm-inline">home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link d-flex flex-column">
+                                <i class="fa fa-laptop"></i>
+                                <span class="d-none d-sm-inline">home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link d-flex flex-column">
+                                <i class="fa fa-laptop"></i>
+                                <span class="d-none d-sm-inline">home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link d-flex flex-column">
+                                <i class="fa fa-laptop"></i>
+                                <span class="d-none d-sm-inline">home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link d-flex flex-column">
+                                <i class="fa fa-laptop"></i>
+                                <span class="d-none d-sm-inline">home</span>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
+        </div>
+
+        <div class="nav">
+                <nav class="navbar nav navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav  nav-justified main-nav mx-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </nav>
+        </div>
+       
+    </section>
+
+   <section id="hero" class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="asset/adult-books-business-coffee-374016 (1).jpg" class="d-block w-100 " height="auto"  alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="asset/computer-keyboard-laptop-screen-109371.jpg" class="d-block w-100"  height="auto" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="asset/business-coffee-composition-computer-265667.jpg" class="d-block w-100"  height="auto" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+                
+                <div class="col-md-4">
+                    <h4 style="background-color: #1570A6; color:#fff; text-align:left; padding:10px 0px 10px 20px"> NEWS & NOTIFICATIONS</h4>
+                <div class="news-main news-container">
+                    <p class="marquee">
+                        <a href="#">you can spend less time searching and more time doing.</a> <br>
+                        <a href="#">you can spend less time searching and more time doing.</a> <br>
+                        <a href="#">you can spend less time searching and more time doing.</a> <br>
+                        <a href="#">you can spend less time searching and more time doing.</a> <br>
+                        <a href="#">you can spend less time searching and more time doing.</a> <br>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+   </section>
+
+   <section class="container">
+       <div class="row" style="text-align: center; margin-top:80px; margin-bottom: 40px">
+           <div class="col-md-12">
+               THE OPTIMIST
+           </div>
+           <div class="col-md-8 offset-md-2 col-sm-12">
+            The Optimist is an institute that is run and managed by IITians who have been among the toppers of IIT JAM and CSIR-UGC
+            NET. We offer an innovative learning environment to prepare for top competitive exams such as CSIR-UGC NET, GATE, IIT
+            JAM, TIFR, JEST and IIT JEE.
+           </div>
+       </div>
+       <div class="row">
+            <div class="col-md-4">
+             <div class="card-box p-4">
+                <i class="fa fa-rocket main-i"></i>
+                <h2>Online Test Series</h2>
+                <p>The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT JAM Physics.</p>
+                <a href="#" >Read more <i class="fa fa-arrow-right"></i></a>
+            </div>
+            </div>
+            <div class="col-md-4"><div class="card-box"></div></div>
+            <div class="col-md-4"><div class="card-box"></div></div>
+       </div>
+   </section>
+
+<section>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="row p-5" >
+            <div class="col-md-6">
+                  <h4>Avail the Opportunity</h4>
+            <p class="lead">
+                Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been happening for decades at
+                the undergraduate and graduate levels. There have been lots of innovation in school level teaching, however the
+                undergraduate and graduate level teaching is plagued with multiple inefficiencies.
+
+            </p>
+            <button type="button" class="btn btn-outline-danger">Danger</button>
+
+            </div>
+            <div class="col-md-6" style="justify-content: end; ">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/WVq1sD_b-Ag?controls=0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+           </div>
+    </div>
+</section>
+
+<section>
+    <div class="jumbotron-parallax">
+         <h4 style="text-align: center;">COURSES AND ONLINE TEST SERIES</h4>
+          <hr style="width: 100px;height: 13px;">  
+
+        <div class="container">
+                Tabs
+           
+        </div>
+      </div>
+
+      
+
+</section>
+
+<section>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="row p-5">
+            <div class="col-md-6">
+                <h4>NEWS & NOTIFICATION</h4>
+                <p class="lead">
+                    Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been
+                    happening for decades at
+                    the undergraduate and graduate levels. There have been lots of innovation in school level teaching,
+                    however the
+                    undergraduate and graduate level teaching is plagued with multiple inefficiencies.
+
+                </p>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+
+            </div>
+                <div class="col-md-6">
+                    <h4>NEWS & NOTIFICATION</h4>
+                    <p class="lead">
+                        Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been
+                        happening for decades at
+                        the undergraduate and graduate levels. There have been lots of innovation in school level teaching,
+                        however the
+                        undergraduate and graduate level teaching is plagued with multiple inefficiencies.
+                    
+                    </p>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="jumbotron-parallax jumbotron-fluid">
+        <h1 class="display-6" style="text-align: center;">VIDEO TESTIMONIALS</h1>
+        <hr style="width: 100px;height: 13px;">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 ">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/WVq1sD_b-Ag?controls=0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="jumbotron jumbotron-fluid" style="text-align: center;">
+        <div class="conatiner">
+            <h4>GET IN TOUCH</h4>
+            <hr style="width: 100px;"> 
+            <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="container-touch">
+                    <a class="card1" href="#">
+                        <h3>This is option 1</h3>
+                        <p class="small">Card description with lots of great facts and interesting details.</p>
+                        <div class="go-corner" href="#">
+                            <div class="go-arrow">
+                                →
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="container-touch">
+                    <a class="card1" href="#">
+                        <h3>This is option 1</h3>
+                        <p class="small">Card description with lots of great facts and interesting details.</p>
+                        <div class="go-corner" href="#">
+                            <div class="go-arrow">
+                                →
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="container-touch">
+                    <a class="card1" href="#">
+                        <h3>This is option 1</h3>
+                        <p class="small">Card description with lots of great facts and interesting details.</p>
+                        <div class="go-corner" href="#">
+                            <div class="go-arrow">
+                                →
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="mb-0"  style="color:'#FFF !important' ;margin-top: -30px; width:'100%'; background-color:green">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8" style="align-self: center;"> 
+                    <p class="display-5">Download The Optimist Mobile App</p> 
+                </div>
+                <div class="col-md-4">
+                     <img src="asset/google-play-store-button-1574486123415.png" width="200px" height="100px" alt="">
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <footer class="footer-area footer--light">
+        <div class="footer-big">
+            <!-- start .container -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="footer-widget">
+                            <div class="widget-about">
+                                <img src="http://placehold.it/250x80" alt="" class="img-fluid">
+                                <p>A Freelance UI Designer & Web Developer</p>
+                                <ul class="contact-details">
+                                    <li>
+                                        <i class="fa fa-phone"></i> Call Us:
+                                        <a href="tel:344-755-111">344-755-111</a>
+                                    </li>
+                                    <li>
+                                        <span class="icon-envelope-open"></span>
+                                        <a href="#">support@rights.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- end /.col-md-4 -->
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu footer-menu--1">
+                                <h4 class="footer-widget-title">Popular Category</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Wordpress</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Plugins</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Joomla Template</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Admin Template</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">HTML Template</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- end /.col-md-3 -->
+    
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu">
+                                <h4 class="footer-widget-title">Our Company</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">How It Works</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Affiliates</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Plan &amp; Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- end /.col-lg-3 -->
+    
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-widget">
+                            <div class="footer-menu no-padding">
+                                <h4 class="footer-widget-title">Help Support</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Support Forum</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Terms &amp; Conditions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Support Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Refund Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buyers Faq</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sellers Faq</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end /.footer-menu -->
+                        </div>
+                        <!-- Ends: .footer-widget -->
+                    </div>
+                    <!-- Ends: .col-lg-3 -->
+    
+                </div>
+                <!-- end /.row -->
+            </div>
+            <!-- end /.container -->
+        </div>
+        <!-- end /.footer-big -->
+    
+        <div class="mini-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright-text">
+                            <p>© 2018
+                                <a href="#">RightBros</a>. All rights reserved. Created by
+                                <a href="http://shravanmeena.me/">shravanmeena</a>
+                            </p>
+                        </div>
+    
+                        <div class="go_top">
+                            <i class="fa fa-arrow-up"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+<script>
+   var yourNavigation = $(".nav");
+    stickyDiv = "sticky";
+    yourHeader = $('.header').height();
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > yourHeader) {
+            yourNavigation.addClass(stickyDiv);
+        } else {
+            yourNavigation.removeClass(stickyDiv);
+        }
+    });
+</script>
+   <script>
+       $(".toggle").on("click", function () {
+            $(".container").toggleClass("news-main");
+        });
+   </script>
+    <!-- JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
