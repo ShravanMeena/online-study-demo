@@ -19,9 +19,10 @@
 
         body {
             background: #D1D1D1;
+            margin: 0;
+            padding: 0;
            
         }
-
 
 
    .news-container {
@@ -67,7 +68,6 @@
 	margin: 0;
     padding: 0 1em;
     line-height: 1.5em;
-    font: 1em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
 }
 
 .news-main:before, .news-main::before,
@@ -116,17 +116,12 @@
 
 /**card-cinatiner */
 
-a{
-    color: #FFF;
-      text-decoration: none;
-
-}
 .card-box {
   display: block;
   background: #9998c6;
   color: #FFF;
   width: 100%;
-  height: 300px;
+  height: auto;
   flex: auto;
   justify-content: center;
   align-items: center;
@@ -161,17 +156,9 @@ margin-top: -35px;
 padding:32px
 }
 
-.btn-outline-danger{
-  color:gray;
-  border-color:red;
-  border-radius:0px;
-  font-weight:100;
-  margin-top:20px;
-}
 
 /* Style the tab */
 
-/* boring stuff */
 
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 * {
@@ -190,24 +177,6 @@ padding:32px
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
-}
-
-h3 {
-  color: #262626;
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-p {
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #666666;
-}
-p.small {
-  font-size: 14px;
 }
 
 .go-corner {
@@ -231,7 +200,6 @@ p.small {
   margin-top: -4px;
   margin-right: -4px;
   color: white;
-  font-family: courier, sans;
 }
 
 .card1 {
@@ -298,25 +266,6 @@ a:focus,a:hover {
 }
 a:focus {
  outline:0
-}
-img {
- max-width:100%
-}
-p {
- font-size:16px;
- line-height:30px;
- color:#898b96;
- font-weight:300
-}
-h4 {
- font-family:Rubik,sans-serif;
- margin:0;
- font-weight:400;
- padding:0;
- color:#363940
-}
-a {
- color:#5867dd
 }
 .no-padding {
  padding:0!important
@@ -419,13 +368,6 @@ a {
  }
 }/* google font */
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-body {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  color: rgba(0, 0, 0, 0.87);
-}
 
 .header {
   width: 100%;
@@ -467,7 +409,7 @@ body {
 
 <body>
 
-    <section id="top-nav">
+    <section>
         <div class="top-bar-social">
             <p class="alignleft">left.</p>
             <p class="alignright">right.</p>
@@ -510,7 +452,7 @@ body {
                 </nav>
         </div>
 
-        <div class="nav">
+        <div >
                 <nav class="navbar nav navbar-expand-lg navbar-light bg-light">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -578,9 +520,9 @@ body {
        
     </section>
 
-   <section id="hero" class="container-fluid mt-4">
+   <section id="hero" class="mt-4 mb-4">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 col-lg-8 col-sm-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -609,7 +551,7 @@ body {
                 </div>
             </div>
                 
-                <div class="col-md-4">
+                <div class="col-md-4 col-lg-4 col-sm-12">
                     <h4 style="background-color: #1570A6; color:#fff; text-align:left; padding:10px 0px 10px 20px"> NEWS & NOTIFICATIONS</h4>
                 <div class="news-main news-container">
                     <p class="marquee">
@@ -636,7 +578,7 @@ body {
             JAM, TIFR, JEST and IIT JEE.
            </div>
        </div>
-       <div class="row">
+       <div class="row mb-4">
             <div class="col-md-4">
              <div class="card-box p-4">
                 <i class="fa fa-rocket main-i"></i>
@@ -645,8 +587,22 @@ body {
                 <a href="#" >Read more <i class="fa fa-arrow-right"></i></a>
             </div>
             </div>
-            <div class="col-md-4"><div class="card-box"></div></div>
-            <div class="col-md-4"><div class="card-box"></div></div>
+            <div class="col-md-4">
+                <div class="card-box p-4">
+                    <i class="fa fa-rocket main-i"></i>
+                    <h2>Online Test Series</h2>
+                    <p>The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT JAM Physics.</p>
+                    <a href="#">Read more <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-box p-4">
+                    <i class="fa fa-rocket main-i"></i>
+                    <h2>Online Test Series</h2>
+                    <p>The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT JAM Physics.</p>
+                    <a href="#">Read more <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
        </div>
    </section>
 
@@ -678,7 +634,7 @@ body {
           <hr style="width: 100px;height: 13px;">  
 
         <div class="container">
-                Tabs
+                <h1 style="color: red;">tabs here</h1>
            
         </div>
       </div>
@@ -688,7 +644,7 @@ body {
 </section>
 
 <section>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron">
         <div class="row p-5">
             <div class="col-md-6">
                 <h4>NEWS & NOTIFICATION</h4>
@@ -720,7 +676,7 @@ body {
 
 
 <section>
-    <div class="jumbotron-parallax jumbotron-fluid">
+    <div class="jumbotron-parallax">
         <h1 class="display-6" style="text-align: center;">VIDEO TESTIMONIALS</h1>
         <hr style="width: 100px;height: 13px;">
         <div class="row">
@@ -733,7 +689,7 @@ body {
 </section>
 
 <section>
-    <div class="jumbotron jumbotron-fluid" style="text-align: center;">
+    <div class="jumbotron" style="text-align: center;">
         <div class="conatiner">
             <h4>GET IN TOUCH</h4>
             <hr style="width: 100px;"> 
@@ -953,6 +909,8 @@ body {
         </div>
     </footer>
 </section>
+
+
 <script>
    var yourNavigation = $(".nav");
     stickyDiv = "sticky";
