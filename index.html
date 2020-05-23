@@ -18,7 +18,7 @@
     <style>
 
         body {
-            background: #D1D1D1;
+            background: #fff;
             margin: 0;
             padding: 0;
            
@@ -113,12 +113,23 @@
     margin: 2em auto;
 }
 
-
+.optimist-title{
+    padding:20px;
+    color: #a12d2f; 
+    font-weight:bold; 
+    font-size:21px
+}
+.optimist-subtitle{
+    color: gray;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
 /**card-cinatiner */
 
 .card-box {
+    cursor: pointer;
   display: block;
-  background: #9998c6;
+  background: #3e4095;
   color: #FFF;
   width: 100%;
   height: auto;
@@ -138,10 +149,29 @@
 }
 
 .card-box .main-i{
-    font-size: 56px;
+    font-size: 44px;
     color: red;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+.card-box .main-i:hover{
+    color: #fff;
 }
 
+.card-title {
+    font-size: 26px;
+}
+
+.card-desc{
+    font-size: 14px;
+}
+
+
+.card-box .main-i h2{
+    font-size: 60px;
+}
 
 
 .jumbotron-parallax{
@@ -375,11 +405,10 @@ a:focus {
   text-transform: uppercase;
 }
 
-.nav {
+.nav_fixed_top {
   width: 100%;
 
   background: #ff5252;
-  color: #fff;
   position: relative;
   z-index: 3;
 }
@@ -391,6 +420,7 @@ a:focus {
 .top-nav .nav-link i{
     font-size: 36px;
     color: #1570A6;
+    box-sizing: border-box;
 }
 .top-bar-social{
     background-color: #1570A6;
@@ -404,7 +434,86 @@ a:focus {
 }
 .carousel-indicators li { visibility: hidden; }
 
-    </style>
+.bg{
+    background-color:#3e4095;
+    color: #fff;
+}
+
+.main-nav .nav-item a{
+    padding: 20px;
+}
+
+.main-nav .nav-item {
+    width: 150px;
+}
+
+
+@media only screen and (max-width: 1400px) {
+   .main-nav .nav-item {
+    width: 100%;
+}
+
+}
+
+
+.main-nav .nav-item a{
+    font-size: 14px;
+    color: #fff !important;
+}
+
+
+.dropdown-menu {
+    color: #000 !important;
+    background-color: #3e4095;
+}
+.nav-tabs{
+    background-color: transparent;
+    justify-content: space-between;
+    border: none;
+    color: #fff;
+}
+.nav-tabs .nav-link{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #ffffff;
+    width: 320px;
+}
+
+
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.header ul li {
+  float: right;
+
+}
+
+
+.header ul li a {
+  display: block;
+  color: #3e4095;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+.header ul li i{
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #3e4095;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #3e4095;
+}
+
+</style>
 </head>
 
 <body>
@@ -414,46 +523,58 @@ a:focus {
             <p class="alignleft">left.</p>
             <p class="alignright">right.</p>
         </div>
-        <div class='header'>
-                <nav class="navbar navbar-dark  navbar-expand justify-content-center">
-                    <a class="navbar-brand" href="#">
-                        <img src="asset/google-play-store-button-1574486123415.png" width="100px" alt="">
-                    </a>
-                    
-                    <div class="container ">
-                        <ul class="navbar-nav top-nav nav-justified w-100 text-center">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link d-flex flex-column">
-                                <i class="fa fa-laptop"></i>
-                                <span class="d-none d-sm-inline">home</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link d-flex flex-column">
-                                <i class="fa fa-laptop"></i>
-                                <span class="d-none d-sm-inline">home</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link d-flex flex-column">
-                                <i class="fa fa-laptop"></i>
-                                <span class="d-none d-sm-inline">home</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link d-flex flex-column">
-                                <i class="fa fa-laptop"></i>
-                                <span class="d-none d-sm-inline">home</span>
-                            </a>
-                        </li>
-                       
-                        </ul>
-                    </div>
-                </nav>
+        <div class=''>
+               
+               <div class="row container-fluid">
+                   <div class="col-md-2">
+                        <a href="" style="align-items: center;"> <img src="https://edkt.net/398thepotimist/logo2(1)-1572932325815.png"
+                        width="250px" alt=""></a>
+                   </div>
+                   <div class="col-md-10 header">
+                        <ul>
+                    <li><a href="#home">
+                    <i class="fa fa-book top-i"></i>
+                        <br>ONLINE ADMISSION
+                    </a></li>
+
+                    <li><a href="#home">
+                    <i class="fa fa-laptop top-i"></i>
+                        <br>ONLINE CLASS
+                    </a></li>
+
+                    <li><a href="#home">
+                    <i class="fa fa-user top-i"></i>
+                        <br>OUR FACILITIES
+                    </a></li>
+
+                    <li><a href="#home">
+                    <i class="fa fa-download top-i"></i>
+                        <br>FREE DOWNLOADS
+                    </a></li>
+
+                    <li><a href="#home">
+                    <i class="fa fa-users top-i"></i>
+                        <br>NEW BATCHES
+                    </a></li>
+
+                    <li><a href="#home">
+                    <i class="fa fa-server top-i"></i>
+                        <br>FEE STRUCTURE 
+                    </a></li>
+
+                    <li><a href="#home">
+                    <i class="fa fa-phone top-i"></i>
+                        <br>ONLINE TEST
+                    </a></li>
+        
+                  
+                </ul>
+                   </div>
+               </div>
         </div>
 
         <div >
-                <nav class="navbar nav navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar nav_fixed_top navbar-expand-lg  bg">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -462,21 +583,15 @@ a:focus {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  nav-justified main-nav mx-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">ABOUT US</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
+                                    COURSES
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Action</a>
@@ -488,7 +603,7 @@ a:focus {
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
+                                    FREE DOWNLOADS
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Action</a>
@@ -498,19 +613,19 @@ a:focus {
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">CAREER WITH US</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">IIT JAM COACHING</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">NET COACHING</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">STUDENT LOGIN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">CONTACT US</a>
                             </li>
                            
                         </ul>
@@ -521,7 +636,7 @@ a:focus {
     </section>
 
    <section id="hero" class="mt-4 mb-4">
-        <div class="row">
+        <div class="row container-fluid">
             <div class="col-md-8 col-lg-8 col-sm-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -569,10 +684,10 @@ a:focus {
 
    <section class="container">
        <div class="row" style="text-align: center; margin-top:80px; margin-bottom: 40px">
-           <div class="col-md-12">
+           <div class="col-md-12 optimist-title">
                THE OPTIMIST
            </div>
-           <div class="col-md-8 offset-md-2 col-sm-12">
+           <div class="col-md-6 offset-md-3 col-sm-12 optimist-subtitle">
             The Optimist is an institute that is run and managed by IITians who have been among the toppers of IIT JAM and CSIR-UGC
             NET. We offer an innovative learning environment to prepare for top competitive exams such as CSIR-UGC NET, GATE, IIT
             JAM, TIFR, JEST and IIT JEE.
@@ -582,42 +697,50 @@ a:focus {
             <div class="col-md-4">
              <div class="card-box p-4">
                 <i class="fa fa-rocket main-i"></i>
-                <h2>Online Test Series</h2>
-                <p>The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT JAM Physics.</p>
-                <a href="#" >Read more <i class="fa fa-arrow-right"></i></a>
+                <h2 class="card-title">Online Test Series</h2>
+                <p class="card-desc">The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT JAM Physics.</p>
+                <a href="#">Read more <i class="fa fa-arrow-right"></i></a>
             </div>
             </div>
+
             <div class="col-md-4">
                 <div class="card-box p-4">
                     <i class="fa fa-rocket main-i"></i>
-                    <h2>Online Test Series</h2>
-                    <p>The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT JAM Physics.</p>
+                    <h2 class="card-title">Online Test Series</h2>
+                    <p class="card-desc">The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT JAM
+                        Physics.</p>
                     <a href="#">Read more <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="card-box p-4">
                     <i class="fa fa-rocket main-i"></i>
-                    <h2>Online Test Series</h2>
-                    <p>The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT JAM Physics.</p>
+                    <h2 class="card-title">Online Test Series</h2>
+                    <p class="card-desc">The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT JAM
+                        Physics.</p>
                     <a href="#">Read more <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
+
+           
+           
        </div>
    </section>
 
 <section>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron">
         <div class="row p-5" >
             <div class="col-md-6">
-                  <h4>Avail the Opportunity</h4>
-            <p class="lead">
+                  <h4 style="color:#a02b2d">Avail the Opportunity</h4>
+                  <hr style="color: #a02b2d; text-align:left;">
+            <p class="lead" style="color: gray; font-size:16px; ">
                 Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been happening for decades at
                 the undergraduate and graduate levels. There have been lots of innovation in school level teaching, however the
                 undergraduate and graduate level teaching is plagued with multiple inefficiencies.
 
             </p>
-            <button type="button" class="btn btn-outline-danger">Danger</button>
+            <button type="button" class="btn btn-outline-danger" style="font-size: 16px" >Read More</button>
 
             </div>
             <div class="col-md-6" style="justify-content: end; ">
@@ -630,13 +753,28 @@ a:focus {
 
 <section>
     <div class="jumbotron-parallax">
-         <h4 style="text-align: center;">COURSES AND ONLINE TEST SERIES</h4>
-          <hr style="width: 100px;height: 13px;">  
+         <h2 style="text-align: center; padding-top:40px">COURSES AND ONLINE TEST SERIES</h2>
+          <hr style="width: 100px;height: 14px;">       
+          <div class="tabs">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tabOne">Test Series</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabTwo"> Classroom Programs</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content pt-3" id="myTabContent">
+                        <div class="tab-pane fade active show" id="tabOne">Test Series Coming Soon...</div>
+                        <div class="tab-pane fade" id="tabTwo">Coming Soon</div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="container">
-                <h1 style="color: red;">tabs here</h1>
-           
-        </div>
+          </div>
+        
       </div>
 
       
@@ -912,7 +1050,7 @@ a:focus {
 
 
 <script>
-   var yourNavigation = $(".nav");
+   var yourNavigation = $(".nav_fixed_top");
     stickyDiv = "sticky";
     yourHeader = $('.header').height();
 
