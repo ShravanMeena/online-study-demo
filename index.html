@@ -175,7 +175,10 @@
 
 
 .jumbotron-parallax{
-    background: url('asset/computer-keyboard-laptop-screen-109371.jpg');
+    background:linear-gradient(
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)
+    ), url('asset/computer-keyboard-laptop-screen-109371.jpg');
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
@@ -222,7 +225,7 @@ padding:32px
   overflow: hidden;
   top: 0;
   right: 0;
-  background-color: #00838d;
+  background-color: #3e4095;
   border-radius: 0 4px 0 32px;
 }
 
@@ -236,13 +239,14 @@ padding:32px
   display: block;
   position: relative;
   max-width: 400px;
-  background-color: #f2f8f9;
+  background-color: #fff;
   border-radius: 4px;
   padding: 32px 24px;
   margin: 12px;
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
+  color: #3e4095;
 }
 .card1:before {
   content: "";
@@ -250,7 +254,7 @@ padding:32px
   z-index: -1;
   top: -16px;
   right: -16px;
-  background: #00838d;
+  background: #3e4095;
   height: 32px;
   width: 42px;
   border-radius: 32px;
@@ -279,7 +283,11 @@ padding:32px
   color: #ffffff;
 }
 
-
+.navbar-toggler-icon{
+    background-color: transparent;
+    color: #ffffff;
+    align-self: center;
+}
 
 ul {
  padding:0;
@@ -423,14 +431,28 @@ a:focus {
     box-sizing: border-box;
 }
 .top-bar-social{
-    background-color: #1570A6;
-    height: 30px;
+    background-color: #353535;
+    height: 44px;
+    color: #fff;
+    
 }
 .alignleft {
-	float: left;
+    float: left;
+    margin-left: 12%;
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-bottom: none;
+    border-top: none;
+    padding: 10px 10px 10px 10px ;
 }
 .alignright {
     float: right;
+    margin-right: 12%;
+     border: 1px solid #fff;
+    border-bottom: none;
+    border-top: none;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px ;
 }
 .carousel-indicators li { visibility: hidden; }
 
@@ -471,6 +493,7 @@ a:focus {
     justify-content: space-between;
     border: none;
     color: #fff;
+    
 }
 .nav-tabs .nav-link{
     background-color: transparent;
@@ -520,14 +543,21 @@ a:focus {
 
     <section>
         <div class="top-bar-social">
-            <p class="alignleft">left.</p>
-            <p class="alignright">right.</p>
+            <p class="alignleft"> 
+                <i class="fa fa-envelope-square"></i>
+                <span>info@theoptimistclasses.com</span>
+            </p>
+            <p class="alignright">
+                <i class="fa fa-facebook"></i>
+                <!-- <i class="fa fa-youtube"></i> -->
+            </p>
+            
         </div>
         <div class=''>
                
                <div class="row container-fluid">
                    <div class="col-md-2">
-                        <a href="" style="align-items: center;"> <img src="https://edkt.net/398thepotimist/logo2(1)-1572932325815.png"
+                        <a href="/" style="align-items: center;"> <img src="https://edkt.net/398thepotimist/logo2(1)-1572932325815.png"
                         width="250px" alt=""></a>
                    </div>
                    <div class="col-md-10 header">
@@ -577,7 +607,7 @@ a:focus {
                 <nav class="navbar nav_fixed_top navbar-expand-lg  bg">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i> </span>
                     </button>
                 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -785,8 +815,8 @@ a:focus {
     <div class="jumbotron">
         <div class="row p-5">
             <div class="col-md-6">
-                <h4>NEWS & NOTIFICATION</h4>
-                <p class="lead">
+                <h4 style="color:#a12d2f; font-size: 21px; font-weight:bold;">NEWS & NOTIFICATION</h4>
+                <p class="lead" style="font-size: 16px;color:gray;">
                     Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been
                     happening for decades at
                     the undergraduate and graduate levels. There have been lots of innovation in school level teaching,
@@ -794,12 +824,12 @@ a:focus {
                     undergraduate and graduate level teaching is plagued with multiple inefficiencies.
 
                 </p>
-                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-danger">Coming Soon...</button>
 
             </div>
                 <div class="col-md-6">
-                    <h4>NEWS & NOTIFICATION</h4>
-                    <p class="lead">
+                    <h4 style="color:#a12d2f; font-size: 21px; font-weight:bold;">OUR HAPPY STUDENT TESTIMONIALS</h4>
+                    <p class="lead" style="font-size: 16px;color:gray;">
                         Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been
                         happening for decades at
                         the undergraduate and graduate levels. There have been lots of innovation in school level teaching,
@@ -815,13 +845,13 @@ a:focus {
 
 <section>
     <div class="jumbotron-parallax">
-        <h1 class="display-6" style="text-align: center;">VIDEO TESTIMONIALS</h1>
+        <h2 style="text-align: center; padding-top:30px">VIDEO TESTIMONIALS</h2>
         <hr style="width: 100px;height: 13px;">
         <div class="row">
             <div class="col-md-4 offset-md-4 ">
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/WVq1sD_b-Ag?controls=0" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+                </div>
         </div>
     </div>
 </section>
@@ -829,8 +859,8 @@ a:focus {
 <section>
     <div class="jumbotron" style="text-align: center;">
         <div class="conatiner">
-            <h4>GET IN TOUCH</h4>
-            <hr style="width: 100px;"> 
+            <h4 class="optimist-title">GET IN TOUCH</h4>
+            <hr style="width: 100px; margin-top:-10px"> 
             <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
         </div>
         <div class="row">
@@ -882,11 +912,11 @@ a:focus {
 </section>
 
 <section>
-    <div class="mb-0"  style="color:'#FFF !important' ;margin-top: -30px; width:'100%'; background-color:green">
+    <div class="mb-0"  style="color:'#FFF !important' ;margin-top: -30px; width:'100%'; background-color:#3e4095">
         <div class="container">
             <div class="row">
                 <div class="col-md-8" style="align-self: center;"> 
-                    <p class="display-5">Download The Optimist Mobile App</p> 
+                    <p style="color: #fff; font-size:20px; ">Download The Optimist Mobile App</p> 
                 </div>
                 <div class="col-md-4">
                      <img src="asset/google-play-store-button-1574486123415.png" width="200px" height="100px" alt="">
@@ -907,7 +937,7 @@ a:focus {
                     <div class="col-md-3 col-sm-12">
                         <div class="footer-widget">
                             <div class="widget-about">
-                                <img src="http://placehold.it/250x80" alt="" class="img-fluid">
+                                <img src="https://edkt.net/398thepotimist/logo2(1)-1572932325815.png" alt="" class="img-fluid">
                                 <p>A Freelance UI Designer & Web Developer</p>
                                 <ul class="contact-details">
                                     <li>
@@ -1032,7 +1062,7 @@ a:focus {
                 <div class="row">
                     <div class="col-md-12">
                         <div class="copyright-text">
-                            <p>© 2018
+                            <p>© 2020
                                 <a href="#">RightBros</a>. All rights reserved. Created by
                                 <a href="http://shravanmeena.me/">shravanmeena</a>
                             </p>
