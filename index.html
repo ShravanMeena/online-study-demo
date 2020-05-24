@@ -12,528 +12,84 @@
     <!--favicon-->
     <link rel="icon" href="asset/airpods_large.jpg" type="image/gif" sizes="16x16">
 
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 
-    <title>OnlineClasses</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        <title>OnlineClasses</title>
     <style>
 
-        body {
-            background: #fff;
-            margin: 0;
-            padding: 0;
-           
-        }
 
+/*/ start count stats /*/
 
-   .news-container {
-    width: 100%;
-    height:90%;
-    overflow: hidden;
-    background:#f2f2f2;
-    position: relative;
-    box-sizing: border-box;
-    border: 1px solid #1570A6;
+section#counter-stats {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
 }
 
-@media only screen and (max-width: 880px) {
-   .news-container {
-    height:55%;
-}
-}
-
-@media only screen and (max-width: 600px) {
-   .news-container {
-    height:100%;
-}
-}
-.marquee {
-    top: 6em;
-    position: relative;
-    box-sizing: border-box;
-    animation: marquee 15s linear infinite;
-}
-
-.marquee:hover {
-    animation-play-state: paused;
-}
-
-/* Make it move! */
-@keyframes marquee {
-    0%   { top:   22em }
-    100% { top: -11em }
-}
-
-/* Make it look pretty */
-.news-main .marquee {
-	margin: 0;
-    padding: 0 1em;
-    line-height: 1.5em;
-}
-
-.news-main:before, .news-main::before,
-.news-main:after,  .news-main::after {
-    left: 0;
-    z-index: 1;
-    content: '';
-    position: absolute;
-    pointer-events: none;
-    width: 100%; height: 2em;
-    background-image: linear-gradient(top, #FFF, rgba(255,255,255,0));
-}
-
-.news-main:after, .news-main::after {
-    bottom: 0;
-    transform: rotate(180deg);
-}
-
-.news-main:before, .news-main::before {
-    top: 0;
-}
-
-/* Style the links */
-.vanity {
-    color: #333;
-    text-align: center;
-    font: .75em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
-}
-
-.vanity a, .news-main a {
-    color: #1570A6;
-    transition: color .5s;
-    text-decoration: none;
-}
-
-.vanity a:hover, .news-main a:hover {
-    color: #F65314;
-}
-
-/* Style toggle button */
-.toggle {
-	display: block;
-    margin: 2em auto;
-}
-
-.optimist-title{
-    padding:20px;
-    color: #a12d2f; 
-    font-weight:bold; 
-    font-size:21px
-}
-.optimist-subtitle{
-    color: gray;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-/**card-cinatiner */
-
-.card-box {
-    cursor: pointer;
-  display: block;
-  background: #3e4095;
-  color: #FFF;
-  width: 100%;
-  height: auto;
-  flex: auto;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2px;
-  margin: 10px 0 10px 0;
-  display: inline-block;
+.stats {
   text-align: center;
-  transition: all .25s linear;
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.4);
+  font-size: 35px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.card-box:hover{
-  box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
-}
-
-.card-box .main-i{
-    font-size: 44px;
-    color: red;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    padding: 8px;
-    margin-bottom: 20px;
-}
-.card-box .main-i:hover{
-    color: #fff;
-}
-
-.card-title {
-    font-size: 26px;
-}
-
-.card-desc{
-    font-size: 14px;
-}
-
-
-.card-box .main-i h2{
-    font-size: 60px;
-}
-
-
-.jumbotron-parallax{
-    background:linear-gradient(
-    rgba(0,0,0,0.8),
-    rgba(0,0,0,0.8)
-    ), url('asset/computer-keyboard-laptop-screen-109371.jpg');
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-background-position: center;
-color:white !important;
-height:500px;
-margin-top: -35px; 
-padding:32px
-}
-
-
-/* Style the tab */
-
-
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
-* {
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-
-.container-touch {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-}
-
-.go-corner {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  background-color: #3e4095;
-  border-radius: 0 4px 0 32px;
-}
-
-.go-arrow {
-  margin-top: -4px;
-  margin-right: -4px;
-  color: white;
-}
-
-.card1 {
-  display: block;
-  position: relative;
-  max-width: 400px;
-  background-color: #fff;
-  border-radius: 4px;
-  padding: 32px 24px;
-  margin: 12px;
-  text-decoration: none;
-  z-index: 0;
-  overflow: hidden;
+.stats .fa {
   color: #3e4095;
+  font-size: 60px;
 }
-.card1:before {
-  content: "";
+
+/*/ end count stats /*/
+
+.owl-nav button {
   position: absolute;
-  z-index: -1;
-  top: -16px;
-  right: -16px;
-  background: #3e4095;
-  height: 32px;
-  width: 42px;
-  border-radius: 32px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: -webkit-transform 0.25s ease-out;
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
-}
-.card1:hover:before {
-  -webkit-transform: scale(21);
-          transform: scale(21);
-}
-
-.card1:hover p {
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  color: rgba(255, 255, 255, 0.8);
-}
-.card1:hover h3 {
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  color: #ffffff;
-}
-
-.navbar-toggler-icon{
-    background-color: transparent;
-    color: #ffffff;
-    align-self: center;
-}
-
-ul {
- padding:0;
- margin:0
-}
-li {
- list-style:none
-}
-a:focus,a:hover {
- text-decoration:none;
- -webkit-transition:.3s ease;
- -o-transition:.3s ease;
- transition:.3s ease
-}
-a:focus {
- outline:0
-}
-.no-padding {
- padding:0!important
-}
-.go_top {
- line-height:40px;
- cursor:pointer;
- width:40px;
- background:#5867dd;
- color:#fff;
- position:fixed;
- -webkit-box-shadow:0 4px 4px rgba(0,0,0,.1);
- box-shadow:0 4px 4px rgba(0,0,0,.1);
- -webkit-border-radius:50%;
- border-radius:50%;
- right:-webkit-calc((100% - 1140px)/ 2);
- right:calc((100% - 1340px)/ 2);
- z-index:111;
- bottom:80px;
- text-align:center
-}
-.go_top span {
- display:inline-block
-}
-.footer-big {
- padding:105px 0 65px 0
-}
-.footer-big .footer-widget {
- margin-bottom:40px
-}
-.footer--light {
- background:#e7e8ed
-}
-.footer-big .footer-menu ul li a,.footer-big p,.footer-big ul li {
- color:#898b96
-}
-.footer-menu {
- padding-left:48px
-}
-.footer-menu ul li a {
- font-size:15px;
- line-height:32px;
- -webkit-transition:.3s;
- -o-transition:.3s;
- transition:.3s
-}
-.footer-menu ul li a:hover {
- color:#5867dd
-}
-.footer-menu--1 {
- width:100%
-}
-.footer-widget-title {
- line-height:42px;
- margin-bottom:10px;
- font-size:18px
-}
-.mini-footer {
- background:#192027;
- text-align:center;
- padding:32px 0
-}
-.mini-footer p {
- margin:0;
- line-height:26px;
- font-size:15px;
- color:#999
-}
-.mini-footer p a {
- color:#5867dd
-}
-.mini-footer p a:hover {
- color:#34bfa3
-}
-.widget-about img {
- display:block;
- margin-bottom:30px
-}
-.widget-about p {
- font-weight:400
-}
-.widget-about .contact-details {
- margin:30px 0 0 0
-}
-.widget-about .contact-details li {
- margin-bottom:10px
-}
-.widget-about .contact-details li:last-child {
- margin-bottom:0
-}
-.widget-about .contact-details li span {
- padding-right:12px
-}
-.widget-about .contact-details li a {
- color:#5867dd
-}
-@media (max-width:991px) {
- .footer-menu {
-  padding-left:0
- }
-}/* google font */
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-.header {
-  width: 100%;
-  font-size: 10px;
-  text-transform: uppercase;
-}
-
-.nav_fixed_top {
-  width: 100%;
-
-  background: #ff5252;
-  position: relative;
-  z-index: 3;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-}
-
-.top-nav .nav-link i{
-    font-size: 36px;
-    color: #1570A6;
-    box-sizing: border-box;
-}
-.top-bar-social{
-    background-color: #353535;
-    height: 44px;
-    color: #fff;
-    
-}
-.alignleft {
-    float: left;
-    margin-left: 12%;
-    font-size: 14px;
-    border: 1px solid #fff;
-    border-bottom: none;
-    border-top: none;
-    padding: 10px 10px 10px 10px ;
-}
-.alignright {
-    float: right;
-    margin-right: 12%;
-     border: 1px solid #fff;
-    border-bottom: none;
-    border-top: none;
-    font-size: 14px;
-    padding: 10px 10px 10px 10px ;
-}
-.carousel-indicators li { visibility: hidden; }
-
-.bg{
-    background-color:#3e4095;
-    color: #fff;
-}
-
-.main-nav .nav-item a{
-    padding: 20px;
-}
-
-.main-nav .nav-item {
-    width: 150px;
-}
-
-
-@media only screen and (max-width: 1400px) {
-   .main-nav .nav-item {
-    width: 100%;
-}
-
-}
-
-
-.main-nav .nav-item a{
-    font-size: 14px;
-    color: #fff !important;
-}
-
-
-.dropdown-menu {
-    color: #000 !important;
-    background-color: #3e4095;
-}
-.nav-tabs{
-    background-color: transparent;
-    justify-content: space-between;
-    border: none;
-    color: #fff;
-    
-}
-.nav-tabs .nav-link{
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #ffffff;
-    width: 320px;
-}
-
-
-.header ul {
-  list-style-type: none;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.owl-nav button.owl-prev {
+  left: 0;
+}
+.owl-nav button.owl-next {
+  right: 0;
 }
 
-.header ul li {
-  float: right;
-
-}
-
-
-.header ul li a {
-  display: block;
-  color: #3e4095;
+.owl-dots {
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 14px;
+  padding-top: 15px;
+}
+.owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc;
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: #000;
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.38) !important;
 }
 
-
-.header ul li i{
-    font-size: 20px;
-    color: #fff;
-    border: 1px solid #3e4095;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: #3e4095;
+.owl-nav button:focus {
+    outline: none;
 }
 
 </style>
@@ -541,6 +97,7 @@ a:focus {
 
 <body>
 
+    <!--Header Navs Start-->
     <section>
         <div class="top-bar-social">
             <p class="alignleft"> 
@@ -665,6 +222,7 @@ a:focus {
        
     </section>
 
+    <!--carousel & marqueee-->
    <section id="hero" class="mt-4 mb-4">
         <div class="row container-fluid">
             <div class="col-md-8 col-lg-8 col-sm-12">
@@ -712,7 +270,10 @@ a:focus {
         </div>
    </section>
 
-   <section class="container">
+   
+
+    <!--optimist section-->
+   <!-- <section class="container">
        <div class="row" style="text-align: center; margin-top:80px; margin-bottom: 40px">
            <div class="col-md-12 optimist-title">
                THE OPTIMIST
@@ -756,8 +317,63 @@ a:focus {
            
            
        </div>
-   </section>
+   </section> -->
 
+<div class="owl-slider container-fluid" style="width:90%">
+    <h3 style="text-align: center; font-weight:bold; color:#a12d2f; font-size:32px; margin-top:100px">OUR NEW COURSES</h3>
+        <hr width="8%">
+    <div id="carousel" class="owl-carousel" style="padding: 20px;">
+        <div class="item">
+            <div class="card-box p-4">
+                <i class="fa fa-rocket main-i"></i>
+                <h2 class="card-title">Online Test Series</h2>
+                <p class="card-desc">The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT
+                    JAM
+                    Physics.</p>
+                <a href="#">Read more <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="card-box p-4">
+                <i class="fa fa-rocket main-i"></i>
+                <h2 class="card-title">Online Test Series</h2>
+                <p class="card-desc">The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT
+                    JAM
+                    Physics.</p>
+                <a href="#">Read more <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="card-box p-4">
+                <i class="fa fa-rocket main-i"></i>
+                <h2 class="card-title">Online Test Series</h2>
+                <p class="card-desc">The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT
+                    JAM
+                    Physics.</p>
+                <a href="#">Read more <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="card-box p-4">
+                <i class="fa fa-rocket main-i"></i>
+                <h2 class="card-title">Online Test Series</h2>
+                <p class="card-desc">The Optimist offers Online Test Series for CSIR-UGC NET Physical Sciences and IIT
+                    JAM
+                    Physics.</p>
+                <a href="#">Read more <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+   
+    <!--Avail the opportunity-->
 <section>
     <div class="jumbotron">
         <div class="row p-5" >
@@ -781,41 +397,32 @@ a:focus {
     </div>
 </section>
 
+    <!--parallax jumbotron-->
 <section>
     <div class="jumbotron-parallax">
-         <h2 style="text-align: center; padding-top:40px">COURSES AND ONLINE TEST SERIES</h2>
-          <hr style="width: 100px;height: 14px;">       
-          <div class="tabs">
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <ul class="nav nav-tabs" id="myTab">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#tabOne">Test Series</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tabTwo"> Classroom Programs</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content pt-3" id="myTabContent">
-                        <div class="tab-pane fade active show" id="tabOne">Test Series Coming Soon...</div>
-                        <div class="tab-pane fade" id="tabTwo">Coming Soon</div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-1">
+                <img src="asset/man.png" width="55%" style="margin: 0 0 -30px 30px" alt="">
             </div>
-
-          </div>
-        
+            <div class="col-md-7 justify-content-center" style="padding:40px 40px 40px 0; margin-top:30px ">
+                <h1>GET THE COACHING TRAINING</h1>
+                <h4 class="mt-2">BY AASHUTOSH CHOUDHARY FREE</h4>
+                <button class="btn btn-outline-danger mt-4 ">Rehister Now</button>
+            </div>
+        </div>
       </div>
 
       
 
 </section>
 
+
+    <!--News & Notification-->
 <section>
-    <div class="jumbotron">
+    <div style="background-color: #fff;">
         <div class="row p-5">
-            <div class="col-md-6">
-                <h4 style="color:#a12d2f; font-size: 21px; font-weight:bold;">NEWS & NOTIFICATION</h4>
+            <div class="col-md-6" style="padding: 60px;">
+                <h4 style="color:#a12d2f; font-size: 21px; font-weight:bold; ">WHY CHOOSE US</h4>
                 <p class="lead" style="font-size: 16px;color:gray;">
                     Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been
                     happening for decades at
@@ -824,93 +431,147 @@ a:focus {
                     undergraduate and graduate level teaching is plagued with multiple inefficiencies.
 
                 </p>
+                <p class="lead" style="font-size: 16px;color:gray;">
+                    Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been
+                    happening for decades at
+                    the undergraduate and graduate levels. There have been lots of innovation in school level teaching,
+                    however the
+                    undergraduate and graduate level teaching is plagued with multiple inefficiencies.
+                
+                </p>
                 <button type="button" class="btn btn-outline-danger">Coming Soon...</button>
 
             </div>
                 <div class="col-md-6">
-                    <h4 style="color:#a12d2f; font-size: 21px; font-weight:bold;">OUR HAPPY STUDENT TESTIMONIALS</h4>
-                    <p class="lead" style="font-size: 16px;color:gray;">
-                        Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been
-                        happening for decades at
-                        the undergraduate and graduate levels. There have been lots of innovation in school level teaching,
-                        however the
-                        undergraduate and graduate level teaching is plagued with multiple inefficiencies.
-                    
-                    </p>
+                    <img src="asset/app.png" width="100%" alt="img">
                 </div>
         </div>
     </div>
 </section>
 
+<!-- start count stats -->
+<section id="counter-stats" class="jumbotron-parallax" data-wow-duration="1.4s">
+    <div class="container">
+        <h1 style="color: #fff; font-weight:bold;text-align:center;padding:15px 0 50px 0;">Our Achivements</h1>
+        <div class="row py-4">
 
-<section>
-    <div class="jumbotron-parallax">
-        <h2 style="text-align: center; padding-top:30px">VIDEO TESTIMONIALS</h2>
-        <hr style="width: 100px;height: 13px;">
-        <div class="row">
-            <div class="col-md-4 offset-md-4 ">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/WVq1sD_b-Ag?controls=0" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+            <div class="col-lg-3 stats">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <div class="counting" data-count="900000">0</div>
+                <h5>Lines of code</h5>
+            </div>
+
+            <div class="col-lg-3 stats">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <div class="counting" data-count="280">0</div>
+                <h5>Projects done</h5>
+            </div>
+
+            <div class="col-lg-3 stats">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <div class="counting" data-count="75">0</div>
+                <h5>Happy clients</h5>
+            </div>
+
+            <div class="col-lg-3 stats">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <div class="counting" data-count="999">0</div>
+                <h5>Time Duration</h5>
+            </div>
+
+
         </div>
+        <!-- end row -->
     </div>
+    <!-- end container -->
+
 </section>
 
+<!-- end cont stats -->
+    <!--our team-->
 <section>
-    <div class="jumbotron" style="text-align: center;">
-        <div class="conatiner">
-            <h4 class="optimist-title">GET IN TOUCH</h4>
-            <hr style="width: 100px; margin-top:-10px"> 
-            <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="container-touch">
-                    <a class="card1" href="#">
-                        <h3>This is option 1</h3>
-                        <p class="small">Card description with lots of great facts and interesting details.</p>
-                        <div class="go-corner" href="#">
-                            <div class="go-arrow">
-                                →
+    <div class="jumbotron">
+            <div class="container">
+                <h3 style="text-align: center; font-weight:bold;color:#a02b2d">OUR PROFESSIONALS</h3>
+                <hr width="5%">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-member">
+                            <div class="team-img">
+                                <img src="asset/man.png"
+                                    alt="team member" class="img-responsive">
+                            </div>
+                            <div class="team-hover">
+                                <div class="desk">
+                                    <h4>Hi There !</h4>
+                                    <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                </div>
+                                <div class="s-link">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="container-touch">
-                    <a class="card1" href="#">
-                        <h3>This is option 1</h3>
-                        <p class="small">Card description with lots of great facts and interesting details.</p>
-                        <div class="go-corner" href="#">
-                            <div class="go-arrow">
-                                →
+                        <div class="team-title">
+                            <h5>AASHUTOSH CHOUDHARY</h5>
+                            <span>founder &amp; ceo</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-member">
+                            <div class="team-img">
+                                <img src="asset/man.png"
+                                    alt="team member" class="img-responsive">
+                            </div>
+                            <div class="team-hover">
+                                <div class="desk">
+                                    <h4>Hello World</h4>
+                                    <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                </div>
+                                <div class="s-link">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="container-touch">
-                    <a class="card1" href="#">
-                        <h3>This is option 1</h3>
-                        <p class="small">Card description with lots of great facts and interesting details.</p>
-                        <div class="go-corner" href="#">
-                            <div class="go-arrow">
-                                →
+                        <div class="team-title">
+                            <h5>SHRAVAN MEENA</h5>
+                            <span>HR Manager</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-member">
+                            <div class="team-img">
+                                <img src="asset/man.png"
+                                    alt="team member" class="img-responsive">
+                            </div>
+                            <div class="team-hover">
+                                <div class="desk">
+                                    <h4>I love to design</h4>
+                                    <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                </div>
+                                <div class="s-link">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            </div>
-
+                        <div class="team-title">
+                            <h5>MANOJ TYAGI</h5>
+                            <span>Marketing Manager</span>
+                        </div>
+                    </div>
             
-        </div>
+                </div>
+            
+            </div>
     </div>
 </section>
 
+    <!--download app jumbotron-->
 <section>
     <div class="mb-0"  style="color:'#FFF !important' ;margin-top: -30px; width:'100%'; background-color:#3e4095">
         <div class="container">
@@ -928,6 +589,8 @@ a:focus {
 </section>
 
 
+
+    <!--Footer-->
 <section>
     <footer class="footer-area footer--light">
         <div class="footer-big">
@@ -1078,6 +741,40 @@ a:focus {
     </footer>
 </section>
 
+<script>
+    jQuery("#carousel").owlCarousel({
+            autoplay: true,
+            lazyLoad: true,
+            loop: true,
+            margin: 20,
+            /*
+           animateOut: 'fadeOut',
+           animateIn: 'fadeIn',
+           */
+            responsiveClass: true,
+            autoHeight: true,
+            autoplayTimeout: 7000,
+            smartSpeed: 800,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+
+                768: {
+                    items: 2
+                },
+
+                1024: {
+                    items: 3
+                },
+
+                1366: {
+                    items: 3
+                }
+            }
+        });
+</script>
 
 <script>
    var yourNavigation = $(".nav_fixed_top");
@@ -1095,6 +792,35 @@ a:focus {
    <script>
        $(".toggle").on("click", function () {
             $(".container").toggleClass("news-main");
+        });
+   </script>
+
+   <script>
+       // number count for stats, using jQuery animate
+
+        $('.counting').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+
+            $({ countNum: $this.text() }).animate({
+                countNum: countTo
+            },
+
+                {
+
+                    duration: 3000,
+                    easing: 'linear',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                        $this.text(this.countNum);
+                        //alert('finished');
+                    }
+
+                });
+
+
         });
    </script>
     <!-- JavaScript -->
