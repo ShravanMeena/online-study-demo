@@ -14,9 +14,55 @@
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/iit-jam.css">
     <title>OnlineClasses</title>
     <style>
+
+
+.card-deck {
+  margin: 0 -15px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-deck .card {
+  margin: 0 0 1rem;
+  background-color: #e9ecef;
+  transition: box-shadow .3s;
+}
+
+.card-deck .card:hover {
+  margin: 0 0 1rem;
+  background-color: #e9ecef;
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+
+}
+.card-deck .card i{
+    color: #a12d2f;
+    font-size: 38px;
+    padding: 30px;
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-deck .card {
+    -ms-flex: 0 0 48.7%;
+    flex: 0 0 48.7%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-deck .card {
+    -ms-flex: 0 0 32%;
+    flex: 0 0 32%;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .card-deck .card {
+    -ms-flex: 0 0 24%;
+    flex: 0 0 24%;
+  }
+}
 
     </style>
 </head>
@@ -39,8 +85,7 @@
     
             <div class="row container-fluid">
                 <div class="col-md-2">
-                    <a href="/"> <img
-                            src="../asset/logo.png" class="logo" alt=""></a>
+                    <a href="/"> <img src="../asset/logo.png" class="logo" alt=""></a>
                 </div>
                 <div class="col-md-10 header">
                     <ul>
@@ -148,152 +193,115 @@
     
     </section>
 
-    <!--Breadcrumb -->
+
 
     <section>
-        <nav aria-label="breadcrumb" >
-            <ol class="breadcrumb container" >
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb container">
                 <li class="breadcrumb-item " aria-current="page">Home</li>
-                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
             </ol>
         </nav>
     </section>
 
-    <!--Meet our main Faculities-->
+    <!-- details contact -->
     <section>
-        <div class="jumbotron">
+        <div class="container mt-5">
+            <div class="card-deck">
+                <div class="card ">
+                    <div class="card-body">
+                        <i class="fa fa-envelope-square"></i>
+
+                        <h5 class="card-title">E-mail</h5>
+                        <p class="card-text">
+                          info@megmail.com
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa fa-phone"></i>
+
+                        <h5 class="card-title">Call</h5>
+                        <p class="card-text">
+                            (+91) 9660801827 <br>
+                            (+91) 9660801827
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa fa-map-marker"></i>
+                        <h5 class="card-title">Head Office</h5>
+                        <p class="card-text"></p>
+                        112 MALL ROAD,
+                        GTB NAGAR,
+                        Beside GTB NAGAR
+                        METRO Gate No. 3. Above Kotak Mahindra ATM
+                        NORTH DELHI 110009
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <i class="fa fa-address-book"></i>
+                        <h5 class="card-title">Branch Office</h5>
+                        <p class="card-text">
+                            HARIOM TOWER,
+                            ROOM NO. 610,
+                            CIRCULAR ROAD, RANCHI(JHARKHAND) 834001
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h4 class="title-hero">MEET OUR MAIN FACULTIES</h4>
-                <hr width="5%">
-                <div class="row">
-                    <div class="col-md-6 mt-5">
-                        <h4>Shamim Sir</h4>
-                        <h6>(M. Sc. IIT Kanpur, Ph.D. IIT Kanpur, JAM Rank-17, NET-JRF Rank-23)</h6>
-                            <p>Dr. Shamim is theoretical Physicist. He worked as assistant professor at Dyal Singh college DU for some years. He has
-                            also worked for CBSE. He regularly took tutorial classes of BTech students at IIT Kanpur during his PhD. He is famous
-                            faculty of Physics for CSIR-NET JRF, IIT JAM. Before launching his own institute, he has been in coaching field for
-                            about 10 years.
-                        </p>
+                <h4 style="text-align: center; color:#a12d2f;font-weight:bold " ;>WANT TO JOIN US</h4>
+                <hr width="5%" style="margin-bottom: 50px;">
+                <div class="row ">
+                    <div class="col-md-6 offset-3 shadow rounded p-4">
+                        <div class="form-box py-4">
+                            <form>
+                                <div class="form-group">
+                                    <input class="form-control" id="name" type="text" name="Name" placeholder="Full Name *">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="email" type="email" name="Email" placeholder="E-mail *">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Select Course *</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Select Enquiry Type *</option>
+                                        <option>General Enquiry</option>
+                                        <option>Subscribe</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" name="Message" rows="7"> How Can We Help You ?</textarea>
+                                </div>
+                                <input class="btn btn-outline-danger" style="width:100%" type="submit" value="Submit" />
+                        </div>
+                        </form>
+                        </div>
                     </div>
-
-                    <div class="col-md-6 mt-5">
-                        <h4>Shamim Sir</h4>
-                        <h6>(M. Sc. IIT Kanpur, Ph.D. IIT Kanpur, JAM Rank-17, NET-JRF Rank-23)</h6>
-                            <p>
-                                Left Career Endeavour after teaching there for two years.
-                         </p>
-                    </div>
-
-                    <div class="col-md-6 mt-5">
-                        <h4>Hitesh Singh Sir</h4>
-                        <h6>(M. Tech. IIT Madras, B. Tech. in ECE )</h6>
-                        <p>
-                            One of the most known Electronics Faculty for more than 7 Years
-                        </p>
-                    </div>
-
                 </div>
+
             </div>
         </div>
     </section>
-
-
-    <!--MEET OUR MANAGEMENT TEAM -->
-    <section>
-        <div class="jumbotron management-team">
-            <div class="container">
-                <h4 class="title-hero">MEET OUR MANAGEMENT TEAM</h4>
-                <hr width="5%">
-                <div class="row">
-                    <div class="col-md-6 mt-5">
-                        <h4>Shamim Sir</h4>
-                        <h6>(M. Sc. IIT Kanpur, Ph.D. IIT Kanpur, JAM Rank-17, NET-JRF Rank-23)</h6>
-                        <p>Dr. Shamim is theoretical Physicist. He worked as assistant professor at Dyal Singh college DU
-                            for some years. He has
-                            also worked for CBSE. He regularly took tutorial classes of BTech students at IIT Kanpur during
-                            his PhD. He is famous
-                            faculty of Physics for CSIR-NET JRF, IIT JAM. Before launching his own institute, he has been in
-                            coaching field for
-                            about 10 years.
-                        </p>
-                    </div>
-    
-                    <div class="col-md-6 mt-5">
-                        <h4>Shamim Sir</h4>
-                        <h6>(M. Sc. IIT Kanpur, Ph.D. IIT Kanpur, JAM Rank-17, NET-JRF Rank-23)</h6>
-                        <p>
-                            Left Career Endeavour after teaching there for two years.
-                        </p>
-                    </div>
-    
-                    <div class="col-md-6 mt-5">
-                        <h4>Hitesh Singh Sir</h4>
-                        <h6>(M. Tech. IIT Madras, B. Tech. in ECE )</h6>
-                        <p>
-                            One of the most known Electronics Faculty for more than 7 Years
-                        </p>
-                    </div>
-    
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section>
-        <div class="container">
-            <h4 class="title-hero">REIMAGINING TEACHING AND LEARNING FOR HIGHER EDUCATION</h4>
-            <hr width="7%" >
-            <h6 style="text-align: center; margin-bottom:30px">Why Us?</h6>
-            <div class="row">
-                <div class="col-md-6 choose-us-img">
-                    <img src="../asset/business-coffee-composition-computer-265667.jpg" width="100%" alt="">
-                </div>
-                <div class="col-md-6 choose-us">
-                    <ul> 
-                        <li>
-                            The Optimist is an institute that is run and managed by IITians who have been among the toppers of IIT-JAM and CSIR-UGC
-                            NET.
-                        </li>
-                        <li>
-                            We were the backbone of NET-JRF and JAM institutes in Delhi. Now we have started our own institute.
-                        </li>
-                        <li>
-                            We do not just cover the syllabus, we properly train and guide students for the competitive exams.
-                        </li>
-                    </ul>
-                    <p>
-                        Teaching process has stayed the same for decades. We combined the traditional classroom teaching with latest digital
-                        platform to offer an engaging and innovative learning experience for all our students.
-                    </p>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 60px;">
-                <div class="col">
-                    <p>
-                        Our vision at The Optimist is to reimagine and evolve the way teaching and learning have been happening for decades at
-                        the undergraduate and graduate level. There have been lots of innovation in school level teaching, however the
-                        undergraduate and graduate level teaching is plagued with multiple inefficiencies.
-                    </p>
-                    <p>
-                        By combining high quality teachers, engaging content and superior technology we are able to create a superior learning
-                        experience for students and aid in their outcome improvement, which is unlike any classroom experience.
-                    </p>
-                    <p>
-                        Teaching and learning are set to transform at a rapid pace and our mission at The Optimist is to accelerate these
-                        transformations.
-                    </p>
-                    <p>
-                        Our aim at The Optimist is to become India's leading education company which enables students to learn at any grade
-                        starting from K12 to Masters level courses from some of the best teachers. The Optimist is founded by IITians who have
-                        been teachers themselves with over 12 years of combined teaching experience and having taught over 8000 students.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     <!--Footer-->
     <section>
         <footer class="footer-area footer--light">

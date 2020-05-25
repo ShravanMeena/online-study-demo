@@ -1,12 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap");
 
+
+        html,
         body {
-            background: #fff;
+            background-color: #e9ecef;
+            font-family: "Manrope", sans-serif;
             margin: 0;
             padding: 0;
-           
+            box-sizing: border-box;
         }
 
-
+hr{
+    border-color: #a12d2f;
+}
+.logo{
+    width: 250px
+}
    .news-container {
     width: 100%;
     height:90%;
@@ -86,7 +95,7 @@
 }
 
 .vanity a:hover, .news-main a:hover {
-    color: #F65314;
+    color: #a12d2f;
 }
 
 /* Style toggle button */
@@ -170,9 +179,6 @@ color:white !important;
 margin-top: -35px; 
 padding:32px
 }
-
-
-/* Style the tab */
 
 .heading-title {
     margin-bottom: 100px;
@@ -397,8 +403,7 @@ a:focus {
  .footer-menu {
   padding-left:0
  }
-}/* google font */
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+}
 
 .header {
   width: 100%;
@@ -454,14 +459,13 @@ a:focus {
     color: #fff;
 }
 
-.main-nav .nav-item a{
+/* .main-nav .nav-item a{
     padding: 20px;
-}
+} */
 
 .main-nav .nav-item {
     width: 150px;
 }
-
 
 @media only screen and (max-width: 1400px) {
    .main-nav .nav-item {
@@ -474,6 +478,13 @@ a:focus {
 .main-nav .nav-item a{
     font-size: 14px;
     color: #fff !important;
+}   
+
+
+.main-nav .nav-item:hover{
+    font-size: 14px;
+    background-color: #a12d2f;
+    color: #fff
 }
 
 
@@ -481,20 +492,17 @@ a:focus {
     color: #000 !important;
     background-color: #3e4095;
 }
-.nav-tabs{
-    background-color: transparent;
-    justify-content: space-between;
-    border: none;
-    color: #fff;
-    
-}
-.nav-tabs .nav-link{
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #ffffff;
-    width: 320px;
+
+.dropdown-menu .dropdown-item:hover{
+    color: #fff !important;
+    background-color: #a12d2f;
 }
 
+.title-hero{
+    color: #a02b2d; 
+    text-align:center; 
+    font-weight:bold !important;
+}
 
 .header ul {
   list-style-type: none;
@@ -502,10 +510,16 @@ a:focus {
   padding: 0;
   overflow: hidden;
   background-color: transparent;
+  margin-left: 100px;
+}
+@media only screen and (max-width: 900px) {
+.header ul {
+  margin-left: 0px;
+}
 }
 
 .header ul li {
-  float: right;
+  float: left;
 
 }
 
@@ -527,4 +541,17 @@ a:focus {
     padding: 8px;
     border-radius: 5px;
     background-color: #3e4095;
+}
+
+
+.breadcrumb{
+    background-color: #dedede;
+    padding: 20px;
+    margin-top: 20px;
+    color: #000;
+}
+
+.breadcrumb .active{
+    color: gray;
+
 }
